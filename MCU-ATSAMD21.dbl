@@ -2,7 +2,13 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description>https://www.microchip.com/en-us/product/ATsamd21g18</description>
+<description>&lt;p&gt;
+Microcontroller circuit with debugging, USB, RTC capabilities based on ATSAMD21.
+&lt;/p&gt;
+&lt;a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/SAM-D21-DA1-Family-Data-Sheet-DS40001882H.pdf"&gt;
+Datasheet
+&lt;/a&gt;
+</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="28618 x 25314 mic"/>
@@ -746,6 +752,25 @@
 <vertex x="-3.6" y="-1.65"/>
 </polygon>
 </package>
+<package name="INDT_P2.50MM-D6.00MM" urn="urn:adsk.eagle:footprint:37068271/1" library_version="13">
+<circle x="0" y="0" radius="3" width="0.127" layer="21"/>
+<pad name="2" x="1.25" y="0" drill="0.7" diameter="1.5" shape="octagon"/>
+<pad name="1" x="-1.25" y="0" drill="0.7" diameter="1.5"/>
+<text x="0" y="3.2" size="0.6" layer="25" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.2" size="0.6" layer="27" ratio="10" align="top-center">&gt;VALUE</text>
+<polygon width="0.001" layer="39">
+<vertex x="3" y="0" curve="90"/>
+<vertex x="0" y="3" curve="90"/>
+<vertex x="-3" y="0" curve="90"/>
+<vertex x="0" y="-3" curve="90"/>
+</polygon>
+<polygon width="0.001" layer="40">
+<vertex x="3" y="0" curve="90"/>
+<vertex x="0" y="3" curve="90"/>
+<vertex x="-3" y="0" curve="90"/>
+<vertex x="0" y="-3" curve="90"/>
+</polygon>
+</package>
 </packages>
 <packages3d>
 <package3d name="RESC1608X40N" urn="urn:adsk.eagle:package:32570306/2" type="model" library_version="2">
@@ -933,6 +958,11 @@
 &lt;p&gt;Metric Code Size 5025&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="2010"/>
+</packageinstances>
+</package3d>
+<package3d name="INDT_P2.50MM-D6.00MM" urn="urn:adsk.eagle:package:37068276/1" type="box" library_version="13">
+<packageinstances>
+<packageinstance name="INDT_P2.50MM-D6.00MM"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1408,7 +1438,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="L-US" urn="urn:adsk.eagle:component:32739905/3" prefix="L" uservalue="yes" library_version="2">
+<deviceset name="L-US" urn="urn:adsk.eagle:component:32739905/4" prefix="L" uservalue="yes" library_version="13">
 <description>&lt;b&gt;INDUCTOR&lt;/b&gt;
 &lt;p&gt;US symbol&lt;/p&gt;</description>
 <gates>
@@ -1434,6 +1464,18 @@
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:32739396/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_P2.50MM-D6.00MM" package="INDT_P2.50MM-D6.00MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37068276/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>

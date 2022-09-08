@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description>https://www.microchip.com/en-us/product/ATsamd21g18</description>
+<description>&lt;p&gt;
+Accelerator circuit based on BNO085 (9-axis).
+&lt;/p&gt;
+&lt;a href="https://www.ceva-dsp.com/wp-content/uploads/2019/10/BNO080_085-Datasheet.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="14728 x 14443 mic"/>
@@ -14,7 +19,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -766,7 +771,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </library>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="LGA28_5.20X3.80MM" library_version="18" library_locally_modified="yes">
+<package name="LGA28_5.20X3.80MM" urn="urn:adsk.eagle:footprint:36673794/1" library_version="26">
 <description>https://www.nxp.com/docs/en/package-information/SOT358-1.pdf</description>
 <wire x1="-1.9" y1="2.6" x2="1.9" y2="2.6" width="0.127" layer="51"/>
 <wire x1="1.9" y1="2.6" x2="1.9" y2="-2.6" width="0.127" layer="51"/>
@@ -823,8 +828,16 @@ In this library the device names are the same as the pin names of the symbols, t
 </polygon>
 </package>
 </packages>
+<packages3d>
+<package3d name="LGA28_5.20X3.80MM" urn="urn:adsk.eagle:package:36673797/1" type="box" library_version="26">
+<description>https://www.nxp.com/docs/en/package-information/SOT358-1.pdf</description>
+<packageinstances>
+<packageinstance name="LGA28_5.20X3.80MM"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="BNO085" library_version="18" library_locally_modified="yes">
+<symbol name="BNO085" urn="urn:adsk.eagle:symbol:36673792/1" library_version="26">
 <text x="-12.7" y="20.828" size="1.778" layer="95">&gt;NAME</text>
 <text x="-12.7" y="-20.828" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
 <wire x1="-12.7" y1="20.32" x2="12.7" y2="20.32" width="0.254" layer="94"/>
@@ -853,7 +866,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BNO085" prefix="IC" library_version="18" library_locally_modified="yes">
+<deviceset name="BNO085" urn="urn:adsk.eagle:component:36673801/1" prefix="IC" library_version="26">
 <description>&lt;b&gt;BNO085&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;CEVA&lt;/i&gt;
 &lt;p&gt;
@@ -885,6 +898,9 @@ Intelligent 9-axis absolute orientation sensor
 <connect gate="G$1" pin="XIN32" pad="27"/>
 <connect gate="G$1" pin="XOUT32" pad="26"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:36673797/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -988,7 +1004,7 @@ Intelligent 9-axis absolute orientation sensor
 <part name="GND1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="GND2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="X1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="XTAL" device="" package3d_urn="urn:adsk.eagle:package:32570220/2" value="32.768k"/>
-<part name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" deviceset="BNO085" device=""/>
+<part name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" deviceset="BNO085" device="" package3d_urn="urn:adsk.eagle:package:36673797/1"/>
 <part name="C6" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="C-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570312/2" value="100n"/>
 <part name="GND8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="GND3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -1490,7 +1506,7 @@ https://www.ceva-dsp.com/wp-content/uploads/2019/10/BNO080_085-Datasheet.pdf
 </library>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="LGA28_5.20X3.80MM" library_version="18" library_locally_modified="yes">
+<package name="LGA28_5.20X3.80MM" urn="urn:adsk.eagle:footprint:36673794/1" library_version="26">
 <description>https://www.nxp.com/docs/en/package-information/SOT358-1.pdf</description>
 <wire x1="-1.9" y1="2.6" x2="1.9" y2="2.6" width="0.127" layer="51"/>
 <wire x1="1.9" y1="2.6" x2="1.9" y2="-2.6" width="0.127" layer="51"/>
@@ -1547,6 +1563,14 @@ https://www.ceva-dsp.com/wp-content/uploads/2019/10/BNO080_085-Datasheet.pdf
 </polygon>
 </package>
 </packages>
+<packages3d>
+<package3d name="LGA28_5.20X3.80MM" urn="urn:adsk.eagle:package:36673797/1" type="box" library_version="26">
+<description>https://www.nxp.com/docs/en/package-information/SOT358-1.pdf</description>
+<packageinstances>
+<packageinstance name="LGA28_5.20X3.80MM"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="all-connectors" urn="urn:adsk.eagle:library:32882087">
 <packages>
@@ -1766,7 +1790,7 @@ Default Capabilities
 <element name="X1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="1206" package3d_urn="urn:adsk.eagle:package:32570220/2" value="32.768k" x="-4.15" y="-1.35" smashed="yes" rot="R270">
 <attribute name="NAME" x="-2.85" y="-1.35" size="0.6" layer="25" rot="R270" align="bottom-center"/>
 </element>
-<element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="LGA28_5.20X3.80MM" value="BNO085" x="0" y="0" smashed="yes">
+<element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="LGA28_5.20X3.80MM" package3d_urn="urn:adsk.eagle:package:36673797/1" value="BNO085" x="0" y="0" smashed="yes">
 <attribute name="NAME" x="2.4" y="-2.9" size="0.6" layer="25" rot="R90" align="top-left"/>
 </element>
 <element name="C6" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="0603" package3d_urn="urn:adsk.eagle:package:32570312/2" value="100n" x="3.25" y="2.25" smashed="yes" rot="R90">

@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+Single Cell Li-Ion/Li-Po charger with reconfigurable current based on MCP73838.
+&lt;/p&gt;
+&lt;a href="https://ww1.microchip.com/downloads/en/DeviceDoc/20002071C.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="15728 x 11028 mic"/>
@@ -14,7 +19,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -85,39 +90,6 @@
 <libraries>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="DFN10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699360/2" library_version="16">
-<description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
-<circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
-<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="51"/>
-<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="51"/>
-<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="51"/>
-<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="51"/>
-<wire x1="-2.1" y1="1.8" x2="2.1" y2="1.8" width="0.07" layer="21"/>
-<wire x1="2.1" y1="1.8" x2="2.1" y2="-1.8" width="0.07" layer="21"/>
-<wire x1="2.1" y1="-1.8" x2="-2.1" y2="-1.8" width="0.07" layer="21"/>
-<wire x1="-2.1" y1="-1.8" x2="-2.1" y2="1.8" width="0.07" layer="21"/>
-<wire x1="-0.75" y1="1.5" x2="0.75" y2="1.5" width="0.127" layer="21"/>
-<wire x1="-0.75" y1="-1.5" x2="0.75" y2="-1.5" width="0.127" layer="21"/>
-<smd name="1" x="-1.425" y="1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="2" x="-1.425" y="0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="3" x="-1.425" y="0" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="4" x="-1.425" y="-0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="5" x="-1.425" y="-1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="6" x="1.425" y="-1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="7" x="1.425" y="-0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="8" x="1.425" y="0" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="9" x="1.425" y="0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="10" x="1.425" y="1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
-<smd name="11" x="0" y="0" dx="1.65" dy="2.35" layer="1" roundness="25" thermals="no"/>
-<text x="0" y="2" size="0.6" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-2" size="0.6" layer="27" align="top-center">&gt;VALUE</text>
-<polygon width="0.001" layer="39">
-<vertex x="-2.1" y="1.8"/>
-<vertex x="-2.1" y="-1.8"/>
-<vertex x="2.1" y="-1.8"/>
-<vertex x="2.1" y="1.8"/>
-</polygon>
-</package>
 <package name="SOP10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699419/2" library_version="16">
 <description>https://ww1.microchip.com/downloads/en/DeviceDoc/10L-MSOP-3x3-mm-MS-C04-00021f.pdf</description>
 <circle x="-3.6" y="1" radius="0.1" width="0.2" layer="21"/>
@@ -150,23 +122,56 @@
 <vertex x="3.2" y="1.8"/>
 </polygon>
 </package>
+<package name="DFN10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699360/3" library_version="26">
+<description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
+<circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="51"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="1.8" x2="2.1" y2="1.8" width="0.07" layer="21"/>
+<wire x1="2.1" y1="1.8" x2="2.1" y2="-1.8" width="0.07" layer="21"/>
+<wire x1="2.1" y1="-1.8" x2="-2.1" y2="-1.8" width="0.07" layer="21"/>
+<wire x1="-2.1" y1="-1.8" x2="-2.1" y2="1.8" width="0.07" layer="21"/>
+<wire x1="-0.75" y1="1.5" x2="0.75" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-0.75" y1="-1.5" x2="0.75" y2="-1.5" width="0.127" layer="21"/>
+<smd name="1" x="-1.425" y="1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="2" x="-1.425" y="0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="3" x="-1.425" y="0" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="4" x="-1.425" y="-0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="5" x="-1.425" y="-1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="6" x="1.425" y="-1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="7" x="1.425" y="-0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="8" x="1.425" y="0" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="9" x="1.425" y="0.5" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="10" x="1.425" y="1" dx="0.7" dy="0.25" layer="1" roundness="25"/>
+<smd name="11" x="0" y="0" dx="1.65" dy="2.35" layer="1" roundness="25"/>
+<text x="0" y="2" size="0.6" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2" size="0.6" layer="27" align="top-center">&gt;VALUE</text>
+<polygon width="0.001" layer="39">
+<vertex x="-2.1" y="1.8"/>
+<vertex x="-2.1" y="-1.8"/>
+<vertex x="2.1" y="-1.8"/>
+<vertex x="2.1" y="1.8"/>
+</polygon>
+</package>
 </packages>
 <packages3d>
-<package3d name="SON50P300X300X80-11T150X340N" urn="urn:adsk.eagle:package:35699356/2" type="model" library_version="16">
-<description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
-<packageinstances>
-<packageinstance name="DFN10_3.00X3.00MM"/>
-</packageinstances>
-</package3d>
 <package3d name="SOP50P490X100-10N" urn="urn:adsk.eagle:package:35699409/2" type="model" library_version="16">
 <description>https://ww1.microchip.com/downloads/en/DeviceDoc/10L-MSOP-3x3-mm-MS-C04-00021f.pdf</description>
 <packageinstances>
 <packageinstance name="SOP10_3.00X3.00MM"/>
 </packageinstances>
 </package3d>
+<package3d name="SON50P300X300X80-11T150X340N" urn="urn:adsk.eagle:package:35699356/3" type="model" library_version="26">
+<description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
+<packageinstances>
+<packageinstance name="DFN10_3.00X3.00MM"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
-<symbol name="MCP73838" urn="urn:adsk.eagle:symbol:35699535/1" locally_modified="yes" library_version="16" library_locally_modified="yes">
+<symbol name="MCP73838" urn="urn:adsk.eagle:symbol:35699535/2" library_version="26">
 <text x="-10.16" y="10.668" size="1.778" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-10.668" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
 <wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
@@ -186,7 +191,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MCP73838" urn="urn:adsk.eagle:component:35699538/1" prefix="IC" library_version="16" library_locally_modified="yes">
+<deviceset name="MCP73838" urn="urn:adsk.eagle:component:35699538/2" prefix="IC" library_version="26">
 <description>&lt;b&gt;MCP73838&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Microchip&lt;/i&gt;
 &lt;p&gt;
@@ -210,7 +215,7 @@ Advanced Stand-Alone Li-Ion/Li-Polymer Battery Charge Management Controller with
 <connect gate="G$1" pin="VUSB" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:35699356/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:35699356/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2206,6 +2211,20 @@ Default Capabilities
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="7,39,b427b4276af86af8"/>
+<approved hash="7,39,e626e6273bf83bf9"/>
+<approved hash="19,1,520752070a770a77"/>
+<approved hash="19,1,fb94fb1a7b6a7be4"/>
+<approved hash="3,1,edf6170e1198f368"/>
+<approved hash="3,1,f6f467006700f6f4"/>
+<approved hash="3,1,35f4918090c724b3"/>
+<approved hash="3,1,7f340cc0138b607f"/>
+<approved hash="3,1,3ef70b0201c03932"/>
+<approved hash="3,1,63fd240925966262"/>
+<approved hash="3,16,65f31f07c09d406b"/>
+<approved hash="3,16,fbf0bc04a389e47d"/>
+</errors>
 </board>
 </drawing>
 </drawings>

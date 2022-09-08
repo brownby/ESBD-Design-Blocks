@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description>http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-ICE_UserGuide.pdf</description>
+<description>&lt;p&gt;
+ARM microcontroller debugger pinout.
+&lt;/p&gt;
+&lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-ICE_UserGuide.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="7064 x 6608 mic"/>
@@ -14,7 +19,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -280,14 +285,38 @@
 <vertex x="-3.47" y="-3.45"/>
 </polygon>
 </package>
+<package name="MA05-2_TH_SHR_2.54MM" urn="urn:adsk.eagle:footprint:36264939/1" library_version="22">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="9" x="5.08" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
+<text x="0" y="4.705" size="1.2" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-4.705" size="1.2" layer="27" align="top-center">&gt;VALUE</text>
+<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
+<rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="-1.016" layer="51"/>
+<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
+<rectangle x1="4.826" y1="-1.524" x2="5.334" y2="-1.016" layer="51"/>
+<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
+<rectangle x1="-5.334" y1="1.016" x2="-4.826" y2="1.524" layer="51"/>
+<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
+<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
+<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
+<rectangle x1="4.826" y1="1.016" x2="5.334" y2="1.524" layer="51"/>
+<circle x="-8.705" y="-1.27" radius="0.1" width="0.2" layer="21"/>
+<wire x1="-8.255" y1="4.445" x2="8.255" y2="4.445" width="0.1524" layer="21"/>
+<wire x1="8.255" y1="4.445" x2="8.255" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="8.255" y1="-4.445" x2="-8.255" y2="-4.445" width="0.1524" layer="21"/>
+<wire x1="-8.255" y1="-4.445" x2="-8.255" y2="4.445" width="0.1524" layer="21"/>
+</package>
 </packages>
 <packages3d>
-<package3d name="HDRV10W64P254_2X5_1270X508X838B" urn="urn:adsk.eagle:package:32737429/4" type="model" library_version="3">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<packageinstances>
-<packageinstance name="MA05-2_TH_2.54MM"/>
-</packageinstances>
-</package3d>
 <package3d name="HDRV10W40P127_2X5_635X254X550B" urn="urn:adsk.eagle:package:32889050/3" type="model" library_version="3">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <packageinstances>
@@ -297,6 +326,13 @@
 <package3d name="MA05-2_SMD_1.27MM" urn="urn:adsk.eagle:package:32739640/2" type="box" library_version="3">
 <packageinstances>
 <packageinstance name="MA05-2_SMD_1.27MM"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV10W64P254_2X5_1270X508X838B" urn="urn:adsk.eagle:package:32737429/5" type="model" library_version="22">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="MA05-2_TH_2.54MM"/>
+<packageinstance name="MA05-2_TH_SHR_2.54MM"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -341,7 +377,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MA05-2" urn="urn:adsk.eagle:component:32737868/3" prefix="J" library_version="3">
+<deviceset name="MA05-2" urn="urn:adsk.eagle:component:32737868/4" prefix="J" library_version="22">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="CON05-2" x="0" y="0"/>
@@ -361,7 +397,7 @@
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:32737429/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:32737429/5"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -402,6 +438,26 @@
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:32739640/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_TH_SRH_2.54MM" package="MA05-2_TH_SHR_2.54MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:32737429/5"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -716,21 +772,21 @@ In this library the device names are the same as the pin names of the symbols, t
 </polygon>
 <circle x="-3.75" y="0" radius="0.1" width="0.2" layer="21"/>
 </package>
-<package name="2010" library_version="2" library_locally_modified="yes">
+<package name="2010" urn="urn:adsk.eagle:footprint:33379856/1" library_version="13">
 <description>&lt;b&gt;Ceramic Chip 2010&lt;/b&gt;
 &lt;p&gt;Metric Code Size 5025&lt;/p&gt;</description>
 <wire x1="-2.4" y1="-1.2" x2="2.4" y2="-1.2" width="0.1" layer="51"/>
 <wire x1="2.4" y1="1.2" x2="-2.4" y2="1.2" width="0.1" layer="51"/>
+<wire x1="-3.6" y1="1.65" x2="3.6" y2="1.65" width="0.07" layer="21"/>
+<wire x1="3.6" y1="1.65" x2="3.6" y2="-1.65" width="0.07" layer="21"/>
+<wire x1="3.6" y1="-1.65" x2="-3.6" y2="-1.65" width="0.07" layer="21"/>
+<wire x1="-3.6" y1="-1.65" x2="-3.6" y2="1.65" width="0.07" layer="21"/>
 <smd name="1" x="-2.5" y="0" dx="1.7" dy="2.8" layer="1" roundness="25"/>
 <smd name="2" x="2.5" y="0" dx="1.7" dy="2.8" layer="1" roundness="25"/>
 <text x="0" y="1.85" size="0.6" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.85" size="0.6" layer="27" align="top-center">&gt;VALUE</text>
 <rectangle x1="1.7" y1="-1.25" x2="2.5" y2="1.25" layer="51"/>
 <rectangle x1="-2.5" y1="-1.25" x2="-1.7" y2="1.25" layer="51"/>
-<wire x1="-3.6" y1="1.65" x2="3.6" y2="1.65" width="0.07" layer="21"/>
-<wire x1="3.6" y1="1.65" x2="3.6" y2="-1.65" width="0.07" layer="21"/>
-<wire x1="3.6" y1="-1.65" x2="-3.6" y2="-1.65" width="0.07" layer="21"/>
-<wire x1="-3.6" y1="-1.65" x2="-3.6" y2="1.65" width="0.07" layer="21"/>
 <polygon width="0.001" layer="39">
 <vertex x="-3.6" y="1.65"/>
 <vertex x="3.6" y="1.65"/>
@@ -794,7 +850,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <packageinstance name="1812P"/>
 </packageinstances>
 </package3d>
-<package3d name="CAPC5025X250N" urn="urn:adsk.eagle:package:32570208/2" locally_modified="yes" type="model" library_version="2" library_locally_modified="yes">
+<package3d name="CAPC5025X250N" urn="urn:adsk.eagle:package:32570208/3" type="model" library_version="13">
 <description>&lt;b&gt;Ceramic Chip 2010&lt;/b&gt;
 &lt;p&gt;Metric Code Size 5025&lt;/p&gt;</description>
 <packageinstances>
@@ -815,7 +871,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="C-US" urn="urn:adsk.eagle:component:32698561/2" locally_modified="yes" prefix="C" uservalue="yes" library_version="2" library_locally_modified="yes">
+<deviceset name="C-US" urn="urn:adsk.eagle:component:32698561/3" prefix="C" uservalue="yes" library_version="13">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;
 &lt;p&gt;US symbol&lt;/p&gt;</description>
 <gates>
@@ -912,7 +968,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:32570208/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:32570208/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>

@@ -2,7 +2,7 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>Template for capacitive touch button.</description>
 <attributes>
 <attribute name="BOARDSIZE" value="818 x 424 mil"/>
 <attribute name="LAYERS" value="1: 1"/>

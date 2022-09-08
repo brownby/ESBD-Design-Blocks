@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+Dual motor full bridge driver based on A3909 (up to 18V, 1A).
+&lt;/p&gt;
+&lt;a href="https://www.allegromicro.com/en/products/motor-drivers/brush-dc-motor-drivers/a3909"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="17995 x 9028 mic"/>

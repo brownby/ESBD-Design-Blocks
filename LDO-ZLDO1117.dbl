@@ -2,10 +2,15 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description>https://www.diodes.com/part/view/ZLDO1117Q/</description>
+<description>&lt;p&gt;
+Low dropout Linear Regulator circuit based on ZLDO1117 (up to 1mA, adjustable and fixed).
+&lt;/p&gt;
+&lt;a href="https://www.diodes.com/assets/Datasheets/ZLDO1117Q.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
-<attribute name="BOARDSIZE" value="16743 x 12489 mic"/>
+<attribute name="BOARDSIZE" value="16743 x 12414 mic"/>
 <attribute name="LAYERS" value="1: 1"/>
 </attributes>
 <drawings>
@@ -130,7 +135,7 @@
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="ZLDO1117" urn="urn:adsk.eagle:symbol:32700330/1" locally_modified="yes" library_version="14" library_locally_modified="yes">
+<symbol name="ZLDO1117" urn="urn:adsk.eagle:symbol:32700330/2" library_version="26">
 <wire x1="-8.89" y1="5.08" x2="-8.89" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-8.89" y1="-5.08" x2="8.89" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="8.89" y1="-5.08" x2="8.89" y2="5.08" width="0.254" layer="94"/>
@@ -143,7 +148,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ZLDO1117" urn="urn:adsk.eagle:component:32700333/1" locally_modified="yes" prefix="IC" uservalue="yes" library_version="14" library_locally_modified="yes">
+<deviceset name="ZLDO1117" urn="urn:adsk.eagle:component:32700333/2" prefix="IC" uservalue="yes" library_version="26">
 <description>&lt;b&gt;ZLDO1117&lt;/b&gt;&lt;br/&gt;
 &lt;i&gt;Diodes Incorporated&lt;/i&gt;
 &lt;p&gt;
@@ -2056,6 +2061,9 @@ Default Capabilities
 <wire x1="6.6" y1="1.95" x2="8" y2="0.55" width="0.5" layer="1"/>
 <wire x1="8" y1="0.55" x2="8" y2="-1.45" width="0.5" layer="1"/>
 <wire x1="0" y1="3.2" x2="0" y2="-3.2" width="0.5" layer="1"/>
+<wire x1="6.85" y1="-3.45" x2="8" y2="-1.45" width="0" layer="19" extent="1-1"/>
+<wire x1="5" y1="-3.45" x2="6.85" y2="-3.45" width="0" layer="19" extent="1-1"/>
+<wire x1="0" y1="-3.2" x2="5" y2="-3.45" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN" class="2">
 <contactref element="C1" pad="1"/>

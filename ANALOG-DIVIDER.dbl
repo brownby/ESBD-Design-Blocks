@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+Simple analog measurement interface using the voltage divider discipline. Uses a low input bias Op-Amp to avoid loading the sensing network and improve measurement capabilities.
+&lt;/p&gt;
+&lt;a href="https://www.analog.com/media/en/technical-documentation/data-sheets/62689f.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="5700 x 12314 mic"/>
@@ -180,25 +185,25 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LTC6268" urn="urn:adsk.eagle:component:33784634/2" prefix="IC" library_version="18" library_locally_modified="yes">
+<deviceset name="LTC6268" urn="urn:adsk.eagle:component:33784634/3" prefix="IC" library_version="26">
 <description>&lt;b&gt;LTC6268&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Linear Technology / Analog Devices&lt;/i&gt;
 &lt;p&gt;
 500MHz Ultra-Low Bias Current FET Input Op Amp
 &lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="OPAMP" x="-12.7" y="0"/>
-<gate name="G$2" symbol="PIN_SHUTDOWN" x="12.7" y="0"/>
+<gate name=".1" symbol="OPAMP" x="-12.7" y="0"/>
+<gate name=".2" symbol="PIN_SHUTDOWN" x="12.7" y="0"/>
 </gates>
 <devices>
 <device name="*S8" package="SOIC8_3.90X4.90MM">
 <connects>
-<connect gate="G$1" pin="IN+" pad="3"/>
-<connect gate="G$1" pin="IN-" pad="2"/>
-<connect gate="G$1" pin="OUT" pad="6"/>
-<connect gate="G$1" pin="V+" pad="7"/>
-<connect gate="G$1" pin="V-" pad="5"/>
-<connect gate="G$2" pin="SHDN" pad="8"/>
+<connect gate=".1" pin="IN+" pad="3"/>
+<connect gate=".1" pin="IN-" pad="2"/>
+<connect gate=".1" pin="OUT" pad="6"/>
+<connect gate=".1" pin="V+" pad="7"/>
+<connect gate=".1" pin="V-" pad="5"/>
+<connect gate=".2" pin="SHDN" pad="8"/>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:33696623/4"/>
@@ -209,12 +214,12 @@
 </device>
 <device name="*S6" package="SOT23-6_1.60X2.90MM">
 <connects>
-<connect gate="G$1" pin="IN+" pad="3"/>
-<connect gate="G$1" pin="IN-" pad="4"/>
-<connect gate="G$1" pin="OUT" pad="1"/>
-<connect gate="G$1" pin="V+" pad="6"/>
-<connect gate="G$1" pin="V-" pad="2"/>
-<connect gate="G$2" pin="SHDN" pad="5"/>
+<connect gate=".1" pin="IN+" pad="3"/>
+<connect gate=".1" pin="IN-" pad="4"/>
+<connect gate=".1" pin="OUT" pad="1"/>
+<connect gate=".1" pin="V+" pad="6"/>
+<connect gate=".1" pin="V-" pad="2"/>
+<connect gate=".2" pin="SHDN" pad="5"/>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:33784568/2"/>
@@ -645,7 +650,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <plain>
 </plain>
 <instances>
-<instance part="IC1" gate="G$1" x="0" y="0" smashed="yes">
+<instance part="IC1" gate=".1" x="0" y="0" smashed="yes">
 <attribute name="NAME" x="10.16" y="2.54" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="10.16" y="-2.54" size="1.778" layer="96" rot="MR0" align="top-left"/>
 </instance>
@@ -668,12 +673,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <nets>
 <net name="VOUT" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="OUT"/>
+<pinref part="IC1" gate=".1" pin="OUT"/>
 <wire x1="10.16" y1="0" x2="12.7" y2="0" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="0" x2="12.7" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="17.78" x2="-12.7" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="17.78" x2="-12.7" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="IN-"/>
+<pinref part="IC1" gate=".1" pin="IN-"/>
 <wire x1="-12.7" y1="2.54" x2="-10.16" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="0" x2="12.7" y2="0" width="0.1524" layer="91"/>
 <junction x="12.7" y="0"/>
@@ -682,14 +687,14 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="VDD" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="V+"/>
+<pinref part="IC1" gate=".1" pin="V+"/>
 <wire x1="0" y1="7.62" x2="0" y2="10.16" width="0.1524" layer="91"/>
 <label x="0" y="10.16" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="V-"/>
+<pinref part="IC1" gate=".1" pin="V-"/>
 <wire x1="0" y1="-7.62" x2="0" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
 </segment>
@@ -701,7 +706,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="VIN" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="IN+"/>
+<pinref part="IC1" gate=".1" pin="IN+"/>
 <wire x1="-10.16" y1="-2.54" x2="-17.78" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-17.78" y1="-2.54" x2="-17.78" y2="-5.08" width="0.1524" layer="91"/>
@@ -1095,8 +1100,8 @@ Default Capabilities
 <via x="0" y="0" extent="1-16" drill="0.3"/>
 <contactref element="IC1" pad="2"/>
 <contactref element="R1" pad="1"/>
-<wire x1="-1.3" y1="0" x2="0" y2="0" width="0" layer="19" extent="1-1"/>
-<wire x1="-1" y1="-4.5" x2="0" y2="0" width="0" layer="19" extent="1-1"/>
+<wire x1="-1.3" y1="0" x2="-1" y2="-4.5" width="0" layer="19" extent="1-1"/>
+<wire x1="0" y1="0" x2="-1.3" y2="0" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VOUT">
 <contactref element="IC1" pad="1"/>

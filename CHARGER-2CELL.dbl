@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+Dual Cell Li-Ion/Li-Po charger with reconfigurable current based on MCP73213.
+&lt;/p&gt;
+&lt;a href="http://ww1.microchip.com/downloads/en/devicedoc/20002190c.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="13078 x 7764 mic"/>
@@ -14,7 +19,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -85,7 +90,7 @@
 <libraries>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="DFN10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699360/2" locally_modified="yes" library_version="16" library_locally_modified="yes">
+<package name="DFN10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699360/3" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
 <circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="51"/>
@@ -120,7 +125,7 @@
 </package>
 </packages>
 <packages3d>
-<package3d name="SON50P300X300X80-11T150X340N" urn="urn:adsk.eagle:package:35699356/2" type="model" library_version="16" library_locally_modified="yes">
+<package3d name="SON50P300X300X80-11T150X340N" urn="urn:adsk.eagle:package:35699356/3" type="model" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
 <packageinstances>
 <packageinstance name="DFN10_3.00X3.00MM"/>
@@ -143,7 +148,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MCP73213" urn="urn:adsk.eagle:component:35699536/1" prefix="IC" library_version="16" library_locally_modified="yes">
+<deviceset name="MCP73213" urn="urn:adsk.eagle:component:35699536/2" prefix="IC" library_version="26">
 <description>&lt;b&gt;MCP73213&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Microchip&lt;/i&gt;
 &lt;p&gt;
@@ -162,7 +167,7 @@ Dual Cell Li-Ion/Li-Polymer Battery Charge Management Controller
 <connect gate="G$1" pin="VDD" pad="1 2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:35699356/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:35699356/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1397,7 +1402,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </class>
 </classes>
 <parts>
-<part name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" deviceset="MCP73213" device="" package3d_urn="urn:adsk.eagle:package:35699356/2"/>
+<part name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" deviceset="MCP73213" device="" package3d_urn="urn:adsk.eagle:package:35699356/3"/>
 <part name="C1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="CPOL-US" device="_0805" package3d_urn="urn:adsk.eagle:package:32570294/2" value="4.7u"/>
 <part name="C2" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="CPOL-US" device="_0805" package3d_urn="urn:adsk.eagle:package:32570294/2" value="4.7u"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -1611,7 +1616,7 @@ R1 = 10 ^ -------------------------- [kΩ]
 <libraries>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="DFN10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699360/2" locally_modified="yes" library_version="16" library_locally_modified="yes">
+<package name="DFN10_3.00X3.00MM" urn="urn:adsk.eagle:footprint:35699360/3" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
 <circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="51"/>
@@ -1646,7 +1651,7 @@ R1 = 10 ^ -------------------------- [kΩ]
 </package>
 </packages>
 <packages3d>
-<package3d name="SON50P300X300X80-11T150X340N" urn="urn:adsk.eagle:package:35699356/2" type="model" library_version="16" library_locally_modified="yes">
+<package3d name="SON50P300X300X80-11T150X340N" urn="urn:adsk.eagle:package:35699356/3" type="model" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/DFN_10_05-08-1699.pdf</description>
 <packageinstances>
 <packageinstance name="DFN10_3.00X3.00MM"/>
@@ -1951,7 +1956,7 @@ Default Capabilities
 </pass>
 </autorouter>
 <elements>
-<element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="DFN10_3.00X3.00MM" package3d_urn="urn:adsk.eagle:package:35699356/2" value="MCP73213" x="0" y="0" smashed="yes">
+<element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="DFN10_3.00X3.00MM" package3d_urn="urn:adsk.eagle:package:35699356/3" value="MCP73213" x="0" y="0" smashed="yes">
 <attribute name="NAME" x="-2.1" y="-2" size="0.6" layer="25" align="top-left"/>
 </element>
 <element name="C1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="0805P" package3d_urn="urn:adsk.eagle:package:32570294/2" value="4.7u" x="-3.8" y="0.15" smashed="yes" rot="R90">

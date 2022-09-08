@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+High precision analog measurement interface using Wheatstone bridge. Uses a Rail-to-Rail Instrumentation Amplifier to transform the differential measurement to single-ended and avoid loading the sensing network.
+&lt;/p&gt;
+&lt;a href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD8226.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="12343 x 34429 mic"/>
@@ -14,7 +19,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -671,7 +676,7 @@ Wide Supply Range, Rail-to-Rail Output Instrumentation Amplifier
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM4121" urn="urn:adsk.eagle:component:36859611/2" locally_modified="yes" prefix="IC" library_version="24" library_locally_modified="yes">
+<deviceset name="LM4121" urn="urn:adsk.eagle:component:36859611/3" prefix="IC" library_version="26">
 <description>&lt;b&gt;LM4121&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Texas Instruments&lt;/i&gt;
 &lt;p&gt;

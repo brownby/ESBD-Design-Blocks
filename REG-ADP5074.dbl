@@ -2,7 +2,12 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+Switching DC-to-DC inverting regulator based on ADP5074 (down to -35V, 2.4A, internal oscillator for 1.2 or 2.4MHz).
+&lt;/p&gt;
+&lt;a href="https://www.analog.com/media/en/technical-documentation/data-sheets/ADP5074.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="18957 x 22479 mic"/>
@@ -857,7 +862,7 @@
 <text x="0" y="-9" size="0.6" layer="27" align="top-center">&gt;VALUE</text>
 <circle x="-10.2" y="0" radius="0.1" width="0.2" layer="21"/>
 </package>
-<package name="POWERDI-5_5.40X4.00MM" library_version="11" library_locally_modified="yes">
+<package name="POWERDI-5_5.40X4.00MM" urn="urn:adsk.eagle:footprint:36863894/1" library_version="13">
 <description>https://www.diodes.com/assets/Package-Files/PowerDI5.pdf</description>
 <smd name="3" x="0" y="1.25" dx="3.36" dy="4.86" layer="1" roundness="25"/>
 <smd name="1" x="-0.92" y="-2.95" dx="1.39" dy="1.4" layer="1" roundness="25"/>
@@ -866,20 +871,20 @@
 <wire x1="2.25" y1="4" x2="2.25" y2="-4" width="0.07" layer="21"/>
 <wire x1="2.25" y1="-4" x2="-2.25" y2="-4" width="0.07" layer="21"/>
 <wire x1="-2.25" y1="-4" x2="-2.25" y2="4" width="0.07" layer="21"/>
+<wire x1="-2" y1="2.8" x2="2" y2="2.8" width="0.127" layer="51"/>
+<wire x1="2" y1="2.8" x2="2" y2="-2.55" width="0.127" layer="51"/>
+<wire x1="2" y1="-2.55" x2="-2" y2="-2.55" width="0.127" layer="51"/>
+<wire x1="-2" y1="-2.55" x2="-2" y2="2.8" width="0.127" layer="51"/>
+<wire x1="-2" y1="2" x2="-2" y2="-2" width="0.127" layer="21"/>
+<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
 <polygon width="0.001" layer="39">
 <vertex x="-2.25" y="-4"/>
 <vertex x="2.25" y="-4"/>
 <vertex x="2.25" y="4"/>
 <vertex x="-2.25" y="4"/>
 </polygon>
-<wire x1="-2" y1="2.8" x2="2" y2="2.8" width="0.127" layer="51"/>
-<wire x1="2" y1="2.8" x2="2" y2="-2.55" width="0.127" layer="51"/>
-<wire x1="2" y1="-2.55" x2="-2" y2="-2.55" width="0.127" layer="51"/>
-<wire x1="-2" y1="-2.55" x2="-2" y2="2.8" width="0.127" layer="51"/>
 <text x="-2.25" y="4.2" size="0.6" layer="25">&gt;NAME</text>
 <text x="-2.25" y="-4.2" size="0.6" layer="27" align="top-left">&gt;VALUE</text>
-<wire x1="-2" y1="2" x2="-2" y2="-2" width="0.127" layer="21"/>
-<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
 </package>
 </packages>
 <packages3d>
@@ -1061,6 +1066,12 @@
 <packageinstance name="CRADS_G6.00MM-D16.00MM"/>
 </packageinstances>
 </package3d>
+<package3d name="POWERDI-5_5.40X4.00MM" urn="urn:adsk.eagle:package:36863895/1" type="box" library_version="13">
+<description>https://www.diodes.com/assets/Package-Files/PowerDI5.pdf</description>
+<packageinstances>
+<packageinstance name="POWERDI-5_5.40X4.00MM"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="R-US" urn="urn:adsk.eagle:symbol:32544607/1" library_version="11">
@@ -1109,23 +1120,23 @@
 <pin name="-" x="0" y="-3.81" visible="off" length="short" direction="pas" rot="R90"/>
 <pin name="+" x="0" y="3.81" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
-<symbol name="SCHOTTKY-1" library_version="11" library_locally_modified="yes">
+<symbol name="SCHOTTKY" urn="urn:adsk.eagle:symbol:32544609/1" library_version="13">
 <wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
 <wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="0" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<text x="0" y="2.159" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-2.159" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
-<pin name="A" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <wire x1="-2.667" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
 <wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
 <wire x1="1.27" y1="1.27" x2="2.032" y2="1.27" width="0.254" layer="94"/>
 <wire x1="2.032" y1="1.27" x2="2.032" y2="0.762" width="0.254" layer="94"/>
 <wire x1="1.27" y1="-1.27" x2="0.508" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="0.508" y1="-1.27" x2="0.508" y2="-0.762" width="0.254" layer="94"/>
+<text x="0" y="2.159" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.159" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
+<pin name="A" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1564,14 +1575,14 @@ Shielded Power Inductor
 </device>
 </devices>
 </deviceset>
-<deviceset name="PDS" prefix="D" library_version="11" library_locally_modified="yes">
+<deviceset name="PDS" urn="urn:adsk.eagle:component:36863896/2" prefix="D" library_version="13">
 <description>&lt;b&gt;PDS&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;Diodes Incorporated&lt;/i&gt;
 &lt;p&gt;
 High Voltage Schottky
 &lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="SCHOTTKY-1" x="0" y="0"/>
+<gate name="G$1" symbol="SCHOTTKY" x="0" y="0"/>
 </gates>
 <devices>
 <device name="4200H" package="POWERDI-5_5.40X4.00MM">
@@ -1579,6 +1590,9 @@ High Voltage Schottky
 <connect gate="G$1" pin="A" pad="1 2"/>
 <connect gate="G$1" pin="C" pad="3"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:36863895/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1588,6 +1602,9 @@ High Voltage Schottky
 <connect gate="G$1" pin="A" pad="1 2"/>
 <connect gate="G$1" pin="C" pad="3"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:36863895/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1665,7 +1682,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R14" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="R-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570306/2"/>
 <part name="C13" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="C-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570312/2"/>
 <part name="GND15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="D11" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="PDS" device="360Q"/>
+<part name="D11" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="PDS" device="360Q" package3d_urn="urn:adsk.eagle:package:36863895/1"/>
 <part name="L11" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="SRP" device="5030CA" package3d_urn="urn:adsk.eagle:package:32700029/1"/>
 <part name="GND1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R12" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="R-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570306/2" value="0"/>
@@ -2175,7 +2192,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <vertex x="-2.95" y="-2.05"/>
 </polygon>
 </package>
-<package name="POWERDI-5_5.40X4.00MM" library_version="11" library_locally_modified="yes">
+<package name="POWERDI-5_5.40X4.00MM" urn="urn:adsk.eagle:footprint:36863894/1" library_version="13">
 <description>https://www.diodes.com/assets/Package-Files/PowerDI5.pdf</description>
 <smd name="3" x="0" y="1.25" dx="3.36" dy="4.86" layer="1" roundness="25"/>
 <smd name="1" x="-0.92" y="-2.95" dx="1.39" dy="1.4" layer="1" roundness="25"/>
@@ -2184,20 +2201,20 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="2.25" y1="4" x2="2.25" y2="-4" width="0.07" layer="21"/>
 <wire x1="2.25" y1="-4" x2="-2.25" y2="-4" width="0.07" layer="21"/>
 <wire x1="-2.25" y1="-4" x2="-2.25" y2="4" width="0.07" layer="21"/>
+<wire x1="-2" y1="2.8" x2="2" y2="2.8" width="0.127" layer="51"/>
+<wire x1="2" y1="2.8" x2="2" y2="-2.55" width="0.127" layer="51"/>
+<wire x1="2" y1="-2.55" x2="-2" y2="-2.55" width="0.127" layer="51"/>
+<wire x1="-2" y1="-2.55" x2="-2" y2="2.8" width="0.127" layer="51"/>
+<wire x1="-2" y1="2" x2="-2" y2="-2" width="0.127" layer="21"/>
+<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
 <polygon width="0.001" layer="39">
 <vertex x="-2.25" y="-4"/>
 <vertex x="2.25" y="-4"/>
 <vertex x="2.25" y="4"/>
 <vertex x="-2.25" y="4"/>
 </polygon>
-<wire x1="-2" y1="2.8" x2="2" y2="2.8" width="0.127" layer="51"/>
-<wire x1="2" y1="2.8" x2="2" y2="-2.55" width="0.127" layer="51"/>
-<wire x1="2" y1="-2.55" x2="-2" y2="-2.55" width="0.127" layer="51"/>
-<wire x1="-2" y1="-2.55" x2="-2" y2="2.8" width="0.127" layer="51"/>
 <text x="-2.25" y="4.2" size="0.6" layer="25">&gt;NAME</text>
 <text x="-2.25" y="-4.2" size="0.6" layer="27" align="top-left">&gt;VALUE</text>
-<wire x1="-2" y1="2" x2="-2" y2="-2" width="0.127" layer="21"/>
-<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
 </package>
 </packages>
 <packages3d>
@@ -2227,6 +2244,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <packageinstance name="1812"/>
 <packageinstance name="1812S"/>
 <packageinstance name="1812P"/>
+</packageinstances>
+</package3d>
+<package3d name="POWERDI-5_5.40X4.00MM" urn="urn:adsk.eagle:package:36863895/1" type="box" library_version="13">
+<description>https://www.diodes.com/assets/Package-Files/PowerDI5.pdf</description>
+<packageinstances>
+<packageinstance name="POWERDI-5_5.40X4.00MM"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -2440,7 +2463,7 @@ Default Capabilities
 <attribute name="NAME" x="2.5" y="7.35" size="0.6" layer="25" align="bottom-center"/>
 <attribute name="VALUE" x="2.5" y="2.85" size="0.6" layer="27" align="top-center"/>
 </element>
-<element name="D11" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="POWERDI-5_5.40X4.00MM" value="PDS360Q" x="-8.1" y="-2.05" smashed="yes">
+<element name="D11" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="POWERDI-5_5.40X4.00MM" package3d_urn="urn:adsk.eagle:package:36863895/1" value="PDS360Q" x="-8.1" y="-2.05" smashed="yes">
 <attribute name="NAME" x="-10.55" y="-2.05" size="0.6" layer="25" rot="R90" align="bottom-center"/>
 </element>
 <element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="QFN16_3.00X3.00MM" package3d_urn="urn:adsk.eagle:package:33786188/4" value="ADP5074" x="0" y="0" smashed="yes">

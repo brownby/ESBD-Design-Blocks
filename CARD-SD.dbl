@@ -2,7 +2,9 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+SD Card socket configured for SPI.
+&lt;/p&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
 <attribute name="BOARDSIZE" value="20478 x 18363 mic"/>
@@ -85,13 +87,21 @@
 <libraries>
 <library name="all-connectors" urn="urn:adsk.eagle:library:32882087">
 <packages>
-<package name="MEM2061" library_version="3" library_locally_modified="yes">
+<package name="MEM2061" urn="urn:adsk.eagle:footprint:34236813/1" library_version="22">
 <wire x1="-7" y1="-7.725" x2="7" y2="-7.725" width="0.127" layer="51"/>
 <wire x1="-7" y1="-7.725" x2="-7" y2="7.725" width="0.127" layer="51"/>
 <wire x1="7" y1="-7.725" x2="7" y2="7.725" width="0.127" layer="51"/>
 <wire x1="-7" y1="7.725" x2="7" y2="7.725" width="0.127" layer="51"/>
 <wire x1="7" y1="5.725" x2="7" y2="7.725" width="0.127" layer="21"/>
 <wire x1="5" y1="7.725" x2="7" y2="7.725" width="0.127" layer="21"/>
+<wire x1="-2" y1="-7.725" x2="2" y2="-7.725" width="0.127" layer="21"/>
+<wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
+<wire x1="-7" y1="2" x2="-7" y2="-2" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="7.725" x2="-1" y2="7.725" width="0.127" layer="21"/>
+<wire x1="-7.45" y1="8.25" x2="7.5" y2="8.25" width="0.07" layer="21"/>
+<wire x1="7.5" y1="8.25" x2="7.5" y2="-8" width="0.07" layer="21"/>
+<wire x1="7.5" y1="-8" x2="-7.45" y2="-8" width="0.07" layer="21"/>
+<wire x1="-7.45" y1="-8" x2="-7.45" y2="8.25" width="0.07" layer="21"/>
 <text x="0" y="8.6" size="1.2" layer="25" ratio="13" rot="SR0" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-8.35" size="1.2" layer="27" ratio="13" rot="SR0" align="top-center">&gt;VALUE</text>
 <rectangle x1="-7" y1="3.1" x2="3.37" y2="5.175" layer="41"/>
@@ -108,14 +118,6 @@
 <smd name="10" x="0.75" y="7.325" dx="1.8" dy="1.4" layer="1" roundness="25"/>
 <smd name="11" x="-6.55" y="-5.825" dx="1.4" dy="1.9" layer="1" roundness="25"/>
 <smd name="12" x="6.6" y="-6.825" dx="1.4" dy="1.9" layer="1" roundness="25"/>
-<wire x1="-2" y1="-7.725" x2="2" y2="-7.725" width="0.127" layer="21"/>
-<wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
-<wire x1="-7" y1="2" x2="-7" y2="-2" width="0.127" layer="21"/>
-<wire x1="-3.5" y1="7.725" x2="-1" y2="7.725" width="0.127" layer="21"/>
-<wire x1="-7.45" y1="8.25" x2="7.5" y2="8.25" width="0.07" layer="21"/>
-<wire x1="7.5" y1="8.25" x2="7.5" y2="-8" width="0.07" layer="21"/>
-<wire x1="7.5" y1="-8" x2="-7.45" y2="-8" width="0.07" layer="21"/>
-<wire x1="-7.45" y1="-8" x2="-7.45" y2="8.25" width="0.07" layer="21"/>
 <polygon width="0.001" layer="39">
 <vertex x="-7.45" y="8.25"/>
 <vertex x="7.5" y="8.25"/>
@@ -124,8 +126,15 @@
 </polygon>
 </package>
 </packages>
+<packages3d>
+<package3d name="MEM2061" urn="urn:adsk.eagle:package:34236824/1" type="box" library_version="22">
+<packageinstances>
+<packageinstance name="MEM2061"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="SD" library_version="3" library_locally_modified="yes">
+<symbol name="SD" urn="urn:adsk.eagle:symbol:34236806/1" library_version="22">
 <wire x1="-12.7" y1="15.24" x2="12.7" y2="15.24" width="0.254" layer="94"/>
 <wire x1="12.7" y1="15.24" x2="12.7" y2="-15.24" width="0.254" layer="94"/>
 <wire x1="12.7" y1="-15.24" x2="-12.7" y2="-15.24" width="0.254" layer="94"/>
@@ -146,7 +155,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MEM2061" prefix="J" library_version="3" library_locally_modified="yes">
+<deviceset name="MEM2061" urn="urn:adsk.eagle:component:34236835/1" prefix="J" library_version="22">
 <description>&lt;b&gt;MEM2061&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;GCT&lt;/i&gt;
 &lt;p&gt;
@@ -170,6 +179,9 @@ Micro SD Memory Card Connector, 1.88mm Profile SMT,Push Push, with normally clos
 <connect gate="G$1" pin="VDD" pad="4"/>
 <connect gate="G$1" pin="VSS" pad="6"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:34236824/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -842,7 +854,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </class>
 </classes>
 <parts>
-<part name="J1" library="all-connectors" library_urn="urn:adsk.eagle:library:32882087" deviceset="MEM2061" device="-01-188-00-A"/>
+<part name="J1" library="all-connectors" library_urn="urn:adsk.eagle:library:32882087" deviceset="MEM2061" device="-01-188-00-A" package3d_urn="urn:adsk.eagle:package:34236824/1"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="C-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570312/2" value="100n"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -1054,13 +1066,21 @@ normally closed</text>
 <libraries>
 <library name="all-connectors" urn="urn:adsk.eagle:library:32882087">
 <packages>
-<package name="MEM2061" library_version="3" library_locally_modified="yes">
+<package name="MEM2061" urn="urn:adsk.eagle:footprint:34236813/1" library_version="22">
 <wire x1="-7" y1="-7.725" x2="7" y2="-7.725" width="0.127" layer="51"/>
 <wire x1="-7" y1="-7.725" x2="-7" y2="7.725" width="0.127" layer="51"/>
 <wire x1="7" y1="-7.725" x2="7" y2="7.725" width="0.127" layer="51"/>
 <wire x1="-7" y1="7.725" x2="7" y2="7.725" width="0.127" layer="51"/>
 <wire x1="7" y1="5.725" x2="7" y2="7.725" width="0.127" layer="21"/>
 <wire x1="5" y1="7.725" x2="7" y2="7.725" width="0.127" layer="21"/>
+<wire x1="-2" y1="-7.725" x2="2" y2="-7.725" width="0.127" layer="21"/>
+<wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
+<wire x1="-7" y1="2" x2="-7" y2="-2" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="7.725" x2="-1" y2="7.725" width="0.127" layer="21"/>
+<wire x1="-7.45" y1="8.25" x2="7.5" y2="8.25" width="0.07" layer="21"/>
+<wire x1="7.5" y1="8.25" x2="7.5" y2="-8" width="0.07" layer="21"/>
+<wire x1="7.5" y1="-8" x2="-7.45" y2="-8" width="0.07" layer="21"/>
+<wire x1="-7.45" y1="-8" x2="-7.45" y2="8.25" width="0.07" layer="21"/>
 <text x="0" y="8.6" size="1.2" layer="25" ratio="13" rot="SR0" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-8.35" size="1.2" layer="27" ratio="13" rot="SR0" align="top-center">&gt;VALUE</text>
 <rectangle x1="-7" y1="3.1" x2="3.37" y2="5.175" layer="41"/>
@@ -1077,14 +1097,6 @@ normally closed</text>
 <smd name="10" x="0.75" y="7.325" dx="1.8" dy="1.4" layer="1" roundness="25"/>
 <smd name="11" x="-6.55" y="-5.825" dx="1.4" dy="1.9" layer="1" roundness="25"/>
 <smd name="12" x="6.6" y="-6.825" dx="1.4" dy="1.9" layer="1" roundness="25"/>
-<wire x1="-2" y1="-7.725" x2="2" y2="-7.725" width="0.127" layer="21"/>
-<wire x1="7" y1="2" x2="7" y2="-2" width="0.127" layer="21"/>
-<wire x1="-7" y1="2" x2="-7" y2="-2" width="0.127" layer="21"/>
-<wire x1="-3.5" y1="7.725" x2="-1" y2="7.725" width="0.127" layer="21"/>
-<wire x1="-7.45" y1="8.25" x2="7.5" y2="8.25" width="0.07" layer="21"/>
-<wire x1="7.5" y1="8.25" x2="7.5" y2="-8" width="0.07" layer="21"/>
-<wire x1="7.5" y1="-8" x2="-7.45" y2="-8" width="0.07" layer="21"/>
-<wire x1="-7.45" y1="-8" x2="-7.45" y2="8.25" width="0.07" layer="21"/>
 <polygon width="0.001" layer="39">
 <vertex x="-7.45" y="8.25"/>
 <vertex x="7.5" y="8.25"/>
@@ -1093,6 +1105,13 @@ normally closed</text>
 </polygon>
 </package>
 </packages>
+<packages3d>
+<package3d name="MEM2061" urn="urn:adsk.eagle:package:34236824/1" type="box" library_version="22">
+<packageinstances>
+<packageinstance name="MEM2061"/>
+</packageinstances>
+</package3d>
+</packages3d>
 </library>
 <library name="all-passives" urn="urn:adsk.eagle:library:32882008">
 <packages>
@@ -1324,7 +1343,7 @@ Default Capabilities
 </pass>
 </autorouter>
 <elements>
-<element name="J1" library="all-connectors" library_urn="urn:adsk.eagle:library:32882087" package="MEM2061" value="MEM2061-01-188-00-A" x="0" y="0" smashed="yes">
+<element name="J1" library="all-connectors" library_urn="urn:adsk.eagle:library:32882087" package="MEM2061" package3d_urn="urn:adsk.eagle:package:34236824/1" value="MEM2061-01-188-00-A" x="0" y="0" smashed="yes">
 <attribute name="NAME" x="0" y="8.6" size="1.2" layer="25" ratio="13" rot="SR0" align="bottom-center"/>
 </element>
 <element name="C1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="0603" package3d_urn="urn:adsk.eagle:package:32570312/2" value="100n" x="-8.5" y="-1.9" smashed="yes" rot="R270">

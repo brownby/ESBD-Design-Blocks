@@ -2,10 +2,15 @@
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.6.2">
 <designblock>
-<description></description>
+<description>&lt;p&gt;
+Analog audio amplifier circuit based on TS4990 (1.2W Mono).
+&lt;/p&gt;
+&lt;a href="https://www.st.com/resource/en/datasheet/ts4990.pdf"&gt;
+Datasheet
+&lt;/a&gt;</description>
 <attributes>
 <attribute name="AIRWIRES" value="YES"/>
-<attribute name="BOARDSIZE" value="23228 x 14024 mic"/>
+<attribute name="BOARDSIZE" value="23228 x 13979 mic"/>
 <attribute name="LAYERS" value="1: 1"/>
 </attributes>
 <drawings>
@@ -14,7 +19,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -855,6 +860,25 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="0" y="1.6636" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.6636" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="INDT_P2.50MM-D6.00MM" urn="urn:adsk.eagle:footprint:37068271/1" library_version="13">
+<circle x="0" y="0" radius="3" width="0.127" layer="21"/>
+<pad name="2" x="1.25" y="0" drill="0.7" diameter="1.5" shape="octagon"/>
+<pad name="1" x="-1.25" y="0" drill="0.7" diameter="1.5"/>
+<text x="0" y="3.2" size="0.6" layer="25" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.2" size="0.6" layer="27" ratio="10" align="top-center">&gt;VALUE</text>
+<polygon width="0.001" layer="39">
+<vertex x="3" y="0" curve="90"/>
+<vertex x="0" y="3" curve="90"/>
+<vertex x="-3" y="0" curve="90"/>
+<vertex x="0" y="-3" curve="90"/>
+</polygon>
+<polygon width="0.001" layer="40">
+<vertex x="3" y="0" curve="90"/>
+<vertex x="0" y="3" curve="90"/>
+<vertex x="-3" y="0" curve="90"/>
+<vertex x="0" y="-3" curve="90"/>
+</polygon>
+</package>
 </packages>
 <packages3d>
 <package3d name="RESC1608X40N" urn="urn:adsk.eagle:package:32570306/2" type="model" library_version="5" library_locally_modified="yes">
@@ -1042,6 +1066,11 @@ In this library the device names are the same as the pin names of the symbols, t
 &lt;p&gt;Chip package with body size 2.00 X 1.30 X 1.30 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="INDC2013X130N"/>
+</packageinstances>
+</package3d>
+<package3d name="INDT_P2.50MM-D6.00MM" urn="urn:adsk.eagle:package:37068276/1" type="box" library_version="13">
+<packageinstances>
+<packageinstance name="INDT_P2.50MM-D6.00MM"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1505,7 +1534,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </device>
 </devices>
 </deviceset>
-<deviceset name="L-US" urn="urn:adsk.eagle:component:32739905/3" prefix="L" uservalue="yes" library_version="5" library_locally_modified="yes">
+<deviceset name="L-US" urn="urn:adsk.eagle:component:32739905/4" prefix="L" uservalue="yes" library_version="13">
 <description>&lt;b&gt;INDUCTOR&lt;/b&gt;
 &lt;p&gt;US symbol&lt;/p&gt;</description>
 <gates>
@@ -1536,13 +1565,25 @@ In this library the device names are the same as the pin names of the symbols, t
 <technology name=""/>
 </technologies>
 </device>
+<device name="_P2.50MM-D6.00MM" package="INDT_P2.50MM-D6.00MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37068276/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
 </library>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="SOIC8_3.90X4.90MM" urn="urn:adsk.eagle:footprint:33784625/1" locally_modified="yes" library_version="8" library_locally_modified="yes">
+<package name="SOIC8_3.90X4.90MM" urn="urn:adsk.eagle:footprint:33784625/2" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-soic/05081610_G_SO8.pdf</description>
 <smd name="1" x="-2.6" y="1.905" dx="1.15" dy="0.8" layer="1" roundness="25" rot="R180"/>
 <smd name="2" x="-2.6" y="0.635" dx="1.15" dy="0.8" layer="1" roundness="25" rot="R180"/>
@@ -1574,7 +1615,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </package>
 </packages>
 <packages3d>
-<package3d name="SOIC127P600X175-8N" urn="urn:adsk.eagle:package:33696623/3" type="model" library_version="8" library_locally_modified="yes">
+<package3d name="SOIC127P600X175-8N" urn="urn:adsk.eagle:package:33696623/4" type="model" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-soic/05081610_G_SO8.pdf</description>
 <packageinstances>
 <packageinstance name="SOIC8_3.90X4.90MM"/>
@@ -1582,7 +1623,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="TS4990" urn="urn:adsk.eagle:symbol:33786200/1" locally_modified="yes" library_version="8" library_locally_modified="yes">
+<symbol name="TS4990" urn="urn:adsk.eagle:symbol:33786200/2" library_version="26">
 <text x="-15.24" y="13.208" size="1.778" layer="95" rot="MR0" align="bottom-right">&gt;NAME</text>
 <text x="-15.24" y="-13.208" size="1.778" layer="96" rot="MR0" align="top-right">&gt;VALUE</text>
 <pin name="VOUT1" x="20.32" y="5.08" length="middle" direction="out" rot="R180"/>
@@ -1605,7 +1646,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TS4990" urn="urn:adsk.eagle:component:33786204/1" prefix="IC" library_version="8" library_locally_modified="yes">
+<deviceset name="TS4990" urn="urn:adsk.eagle:component:33786204/2" prefix="IC" library_version="26">
 <description>&lt;b&gt;TS4990&lt;/b&gt;&lt;br/&gt;
 &lt;i&gt;STMicroelectronics&lt;/i&gt;
 &lt;p&gt;
@@ -1627,7 +1668,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <connect gate="G$1" pin="VOUT2" pad="8"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:33696623/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:33696623/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1670,7 +1711,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="C6" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="C-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570312/2" value="220p"/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" deviceset="TS4990" device="IDT" package3d_urn="urn:adsk.eagle:package:33696623/3"/>
+<part name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" deviceset="TS4990" device="IDT" package3d_urn="urn:adsk.eagle:package:33696623/4"/>
 <part name="RB1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="R-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570306/2" value="20k"/>
 <part name="RB2" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="R-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570306/2" value="20k"/>
 <part name="RF2" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" deviceset="R-US" device="0603" package3d_urn="urn:adsk.eagle:package:32570306/2" value="20k"/>
@@ -1954,36 +1995,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,15.24,15.24,IC1,SW2,N$11,,,"/>
-<approved hash="104,1,-15.24,15.24,IC1,SW1,N$12,,,"/>
-<approved hash="104,1,-15.24,5.08,IC1,VIN,VIN1,,,"/>
-<approved hash="104,1,-15.24,-10.16,IC1,VCC,N$20,,,"/>
-<approved hash="104,1,15.24,-15.24,IC1,SGND,GND,,,"/>
-<approved hash="104,1,15.24,7.62,IC1,PVOUT,VOUT1,,,"/>
-<approved hash="104,1,15.24,-12.7,IC1,PGND,GND,,,"/>
-<approved hash="104,1,-15.24,7.62,IC1,PVIN,VIN1,,,"/>
-<approved hash="104,1,-15.24,-12.7,IC1,SVCC,N$20,,,"/>
-<approved hash="104,1,121.92,5.08,IC2,OUT,VOUT2,,,"/>
-<approved hash="104,1,93.98,5.08,IC2,IN,VIN2,,,"/>
-<approved hash="104,1,198.12,5.08,IC3,OUT,VOUT3,,,"/>
-<approved hash="104,1,170.18,5.08,IC3,IN,VIN3,,,"/>
-<approved hash="113,1,40.4444,1.27,C3,,,,,"/>
-<approved hash="113,1,30.6476,2.54,R1,,,,,"/>
-<approved hash="113,1,23.0276,-15.24,R3,,,,,"/>
-<approved hash="113,1,25.2298,-26.67,C4,,,,,"/>
-<approved hash="113,1,-18.8824,-22.86,R4,,,,,"/>
-<approved hash="113,1,-45.9156,1.27,C6,,,,,"/>
-<approved hash="113,1,0,26.5024,L1,,,,,"/>
-<approved hash="113,1,107.95,1.47066,IC2,,,,,"/>
-<approved hash="113,1,130.978,0,R10,,,,,"/>
-<approved hash="113,1,130.978,-10.16,R11,,,,,"/>
-<approved hash="113,1,184.15,1.47066,IC3,,,,,"/>
-<approved hash="113,1,207.178,0,R12,,,,,"/>
-<approved hash="113,1,207.178,-10.16,R13,,,,,"/>
-<approved hash="113,1,46.7944,1.27,C7,,,,,"/>
-<approved hash="113,1,53.1444,1.27,C9,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <drawing>
@@ -2198,7 +2209,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </library>
 <library name="all-chips" urn="urn:adsk.eagle:library:32882074">
 <packages>
-<package name="SOIC8_3.90X4.90MM" urn="urn:adsk.eagle:footprint:33784625/1" locally_modified="yes" library_version="8" library_locally_modified="yes">
+<package name="SOIC8_3.90X4.90MM" urn="urn:adsk.eagle:footprint:33784625/2" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-soic/05081610_G_SO8.pdf</description>
 <smd name="1" x="-2.6" y="1.905" dx="1.15" dy="0.8" layer="1" roundness="25" rot="R180"/>
 <smd name="2" x="-2.6" y="0.635" dx="1.15" dy="0.8" layer="1" roundness="25" rot="R180"/>
@@ -2230,7 +2241,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </package>
 </packages>
 <packages3d>
-<package3d name="SOIC127P600X175-8N" urn="urn:adsk.eagle:package:33696623/3" type="model" library_version="8" library_locally_modified="yes">
+<package3d name="SOIC127P600X175-8N" urn="urn:adsk.eagle:package:33696623/4" type="model" library_version="26">
 <description>https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-soic/05081610_G_SO8.pdf</description>
 <packageinstances>
 <packageinstance name="SOIC8_3.90X4.90MM"/>
@@ -2469,7 +2480,7 @@ Default Capabilities
 <element name="C6" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="0603" package3d_urn="urn:adsk.eagle:package:32570312/2" value="220p" x="5.6" y="3.75" smashed="yes" rot="R180">
 <attribute name="NAME" x="5.6" y="4.6" size="0.6" layer="25" align="bottom-center"/>
 </element>
-<element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="SOIC8_3.90X4.90MM" package3d_urn="urn:adsk.eagle:package:33696623/3" value="TS4990IDT" x="0" y="0" smashed="yes">
+<element name="IC1" library="all-chips" library_urn="urn:adsk.eagle:library:32882074" package="SOIC8_3.90X4.90MM" package3d_urn="urn:adsk.eagle:package:33696623/4" value="TS4990IDT" x="0" y="0" smashed="yes">
 <attribute name="NAME" x="3.5" y="2.9" size="0.6" layer="25" ratio="6" rot="SR0" align="bottom-right"/>
 </element>
 <element name="RB1" library="all-passives" library_urn="urn:adsk.eagle:library:32882008" package="0603" package3d_urn="urn:adsk.eagle:package:32570306/2" value="20k" x="-5.6" y="-2.15" smashed="yes">
