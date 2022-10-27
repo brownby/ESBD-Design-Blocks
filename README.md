@@ -10,7 +10,7 @@ We've included an array of common sub-circuit designs such as
  - Microcontrollers
  - Motor drivers
 
- and more, and we have plans to add even mroe in the future.
+ and more, and we have plans to add even more in the future.
 
 ## Using these design blocks in Eagle
 
